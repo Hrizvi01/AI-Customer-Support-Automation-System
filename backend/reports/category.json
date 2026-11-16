@@ -1,0 +1,217 @@
+{
+  "task": "category",
+  "status": "trained",
+  "trained_at": "2026-11-16T19:05:52.515541+00:00",
+  "model": "TF-IDF word + char n-grams / LogisticRegression",
+  "metrics": {
+    "accuracy": 0.9453836150845254,
+    "precision_macro": 0.9402125027696,
+    "recall_macro": 0.9444851265247963,
+    "f1_macro": 0.9422615847325959
+  },
+  "baseline_accuracy": 0.32444733420026006,
+  "classes": [
+    "account",
+    "billing",
+    "general",
+    "technical"
+  ],
+  "confusion_matrix": [
+    [
+      614,
+      4,
+      16,
+      6
+    ],
+    [
+      9,
+      947,
+      17,
+      25
+    ],
+    [
+      16,
+      21,
+      901,
+      20
+    ],
+    [
+      5,
+      19,
+      10,
+      446
+    ]
+  ],
+  "classification_report": {
+    "account": {
+      "precision": 0.953416149068323,
+      "recall": 0.959375,
+      "f1-score": 0.956386292834891,
+      "support": 640.0
+    },
+    "billing": {
+      "precision": 0.9556004036326943,
+      "recall": 0.9488977955911824,
+      "f1-score": 0.9522373051784816,
+      "support": 998.0
+    },
+    "general": {
+      "precision": 0.9544491525423728,
+      "recall": 0.9405010438413361,
+      "f1-score": 0.9474237644584648,
+      "support": 958.0
+    },
+    "technical": {
+      "precision": 0.89738430583501,
+      "recall": 0.9291666666666667,
+      "f1-score": 0.9129989764585466,
+      "support": 480.0
+    },
+    "accuracy": 0.9453836150845254,
+    "macro avg": {
+      "precision": 0.9402125027696,
+      "recall": 0.9444851265247963,
+      "f1-score": 0.9422615847325959,
+      "support": 3076.0
+    },
+    "weighted avg": {
+      "precision": 0.9457029561656546,
+      "recall": 0.9453836150845254,
+      "f1-score": 0.9454783917535001,
+      "support": 3076.0
+    }
+  },
+  "train_rows": 9947,
+  "test_rows": 3076,
+  "train_distribution": {
+    "billing": 3905,
+    "general": 2655,
+    "account": 1869,
+    "technical": 1518
+  },
+  "test_distribution": {
+    "billing": 998,
+    "general": 958,
+    "account": 640,
+    "technical": 480
+  },
+  "duration_seconds": 14.823,
+  "seed": 42,
+  "python": "3.12.15",
+  "sklearn": "1.9.1",
+  "provenance": {
+    "source": "BANKING77 / PolyAI-LDN/task-specific-datasets",
+    "url": "https://github.com/PolyAI-LDN/task-specific-datasets",
+    "license": "CC-BY-4.0",
+    "revision": "57ec275d8078af65b7731c2a98be812d844a6d6b",
+    "download_sha256": {
+      "train": "b06e26ac675513959a63135f11b94ea7786ed02da65db93a5650d8838cbc664b",
+      "test": "d12d6e3bc4c3103966ae786dc435913c0c563dfa328f5a3646d0e62cfeeb474d"
+    },
+    "task": "category",
+    "label_origin": "Original intent labels manually grouped into four operational categories.",
+    "domain": "English online banking queries; not a general support benchmark.",
+    "mapping": {
+      "Refund_not_showing_up": "billing",
+      "activate_my_card": "account",
+      "age_limit": "general",
+      "apple_pay_or_google_pay": "technical",
+      "atm_support": "general",
+      "automatic_top_up": "technical",
+      "balance_not_updated_after_bank_transfer": "technical",
+      "balance_not_updated_after_cheque_or_cash_deposit": "technical",
+      "beneficiary_not_allowed": "account",
+      "cancel_transfer": "billing",
+      "card_about_to_expire": "general",
+      "card_acceptance": "general",
+      "card_arrival": "general",
+      "card_delivery_estimate": "general",
+      "card_linking": "account",
+      "card_not_working": "technical",
+      "card_payment_fee_charged": "billing",
+      "card_payment_not_recognised": "billing",
+      "card_payment_wrong_exchange_rate": "billing",
+      "card_swallowed": "general",
+      "cash_withdrawal_charge": "billing",
+      "cash_withdrawal_not_recognised": "billing",
+      "change_pin": "account",
+      "compromised_card": "account",
+      "contactless_not_working": "technical",
+      "country_support": "general",
+      "declined_card_payment": "technical",
+      "declined_cash_withdrawal": "technical",
+      "declined_transfer": "technical",
+      "direct_debit_payment_not_recognised": "billing",
+      "disposable_card_limits": "general",
+      "edit_personal_details": "account",
+      "exchange_charge": "billing",
+      "exchange_rate": "billing",
+      "exchange_via_app": "general",
+      "extra_charge_on_statement": "billing",
+      "failed_transfer": "technical",
+      "fiat_currency_support": "general",
+      "get_disposable_virtual_card": "general",
+      "get_physical_card": "general",
+      "getting_spare_card": "general",
+      "getting_virtual_card": "general",
+      "lost_or_stolen_card": "account",
+      "lost_or_stolen_phone": "account",
+      "order_physical_card": "general",
+      "passcode_forgotten": "account",
+      "pending_card_payment": "billing",
+      "pending_cash_withdrawal": "billing",
+      "pending_top_up": "billing",
+      "pending_transfer": "billing",
+      "pin_blocked": "account",
+      "receiving_money": "general",
+      "request_refund": "billing",
+      "reverted_card_payment?": "billing",
+      "supported_cards_and_currencies": "general",
+      "terminate_account": "account",
+      "top_up_by_bank_transfer_charge": "billing",
+      "top_up_by_card_charge": "billing",
+      "top_up_by_cash_or_cheque": "general",
+      "top_up_failed": "technical",
+      "top_up_limits": "general",
+      "top_up_reverted": "billing",
+      "topping_up_by_card": "general",
+      "transaction_charged_twice": "billing",
+      "transfer_fee_charged": "billing",
+      "transfer_into_account": "general",
+      "transfer_not_received_by_recipient": "billing",
+      "transfer_timing": "general",
+      "unable_to_verify_identity": "account",
+      "verify_my_identity": "account",
+      "verify_source_of_funds": "account",
+      "verify_top_up": "account",
+      "virtual_card_not_working": "technical",
+      "visa_or_mastercard": "general",
+      "why_verify_identity": "account",
+      "wrong_amount_of_cash_received": "billing",
+      "wrong_exchange_rate_for_cash_withdrawal": "billing"
+    },
+    "audit": {
+      "train_cleaning": {
+        "input_rows": 10003,
+        "retained_rows": 9972,
+        "conflicting_texts": 0
+      },
+      "test_cleaning": {
+        "input_rows": 3080,
+        "retained_rows": 3076,
+        "conflicting_texts": 0
+      },
+      "train_duplicates_removed_against_test": 25
+    },
+    "split": "Official train/test; exact normalized overlaps removed from training."
+  },
+  "data_sha256": {
+    "train": "595c47aa5ebeb5bce0dafcdeb65497196d2ce4f5b7c47877363cc350c99aaee8",
+    "test": "00d05f0ff6245046753c9bd0df8b60ebfd14e81c9092ab9f5bbb67f996740639"
+  },
+  "limitations": [
+    "No support-domain validation.",
+    "Exact normalized deduplication only; near-duplicate leakage may remain.",
+    "Hyperparameters fixed in advance; test split not used to select them."
+  ]
+}

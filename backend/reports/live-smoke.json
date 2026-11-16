@@ -1,0 +1,40 @@
+{
+  "database": "sqlite_demo",
+  "health": {
+    "database": "ready",
+    "database_type": "sqlite_demo",
+    "ollama": {
+      "status": "ready",
+      "model": "qwen2.5:0.5b"
+    },
+    "category_model": "trained",
+    "priority_model": "untrained",
+    "sentiment": "downloaded"
+  },
+  "inference": {
+    "category": {
+      "status": "ready",
+      "label": "billing",
+      "confidence": 0.9914269727336593,
+      "needs_review": false,
+      "model_version": "2026-11-16T19:05:54.869392+00:00"
+    },
+    "priority": {
+      "status": "untrained",
+      "label": null,
+      "confidence": null,
+      "message": "No trained priority model. Follow the training guide."
+    },
+    "sentiment": {
+      "status": "ready",
+      "label": "neutral",
+      "confidence": 0.6551953554153442,
+      "model": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+      "truncated": false
+    }
+  },
+  "reply_http_status": 200,
+  "reply_model": "qwen2.5:0.5b",
+  "reply_nonempty": true,
+  "note": "Service smoke check on fictional content; not an accuracy evaluation."
+}
